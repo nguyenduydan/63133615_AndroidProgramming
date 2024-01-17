@@ -1,2 +1,12 @@
-# 63133615_AndroidProgramming
-Các bài thực hành và bài tập được lưu tại đây và Push lên server thường xuyên để thầy tracking quá trình
+
+## 🚀 About Me
+### I'm a second-year student majoring in software engineering
+
+
+# Hi, I'm Duy Đan! 👋
+
+
+## Feedback
+
+If you have any feedback, please reach out to me at duydan.cv@gmail.com
+
