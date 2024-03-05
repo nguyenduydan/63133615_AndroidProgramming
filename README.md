@@ -1,12 +1,101 @@
+<a name="readme-top"></a>
 
-## 🚀 About Me
-### I'm a third-year student majoring in software engineering
+[![Contributors][contributors-shield]][contributors-url] ![languagecount][language-count-shield] ![license][license-shield] [![GitHub followers][followers-shield]][contributors-url]
 
+<br/>
+<!-- Giới thiệu bản thân -->
+<div align="center">
+    <a href="https://github.com/nguyenduydan/63133615_AndroidProgramming">
+        <img src="Img/logo1.png" alt="Logo" width="auto" height="300">
+    </a>
+     <h3 align="center">NGUYỄN THIẾT DUY ĐAN</h3>
+     <h3 align="center" style="margin:0">63133615</h3>
 
-# Hi, I'm Duy Đan! 👋
+</div>
 
+<!-- Mục lục -->
+<details>
+  <summary>Mục lục</summary>
+  <ol style="font-size:15px;" >
+    <li>
+      <a href="#giới-thiệu-về-androidstudio">Giới thiệu về AndroidStudio</a>
+      <ul>
+        <li><a href="#android-studio">Android Studio</a></li>
+        <li><a href="#một-số-đặc-điểm-của-android-studio">Một số điểm nổi bật về Android Studio</a></li>
+      </ul>
+    </li>
+    <li>
+        <a href="#các-bài-thực-hành-đặc-biệt">Các bài thực hành đặc biệt</a>
+        <ul>
+            <li><a href="#ex1_hello">Ex1_Hello</a></li>
+        </ul>
+    </li>
+  </ol>
+</details>
 
-## Feedback
+## Giới thiệu về AndroidStudio
 
-If you have any feedback, please reach out to me at duydan.cv@gmail.com
+### Android Studio
 
+<p>
+   Android Studio là một môi trường phát triển tích hợp (IDE) được phát triển bởi Google để phát triển ứng dụng di động chạy trên nền tảng Android. Nó là công cụ chính thức để phát triển ứng dụng Android và cung cấp một loạt các tính năng và công cụ để tạo, kiểm tra và triển khai ứng dụng Android một cách hiệu quả.
+</p>
+
+### Một số đặc điểm của Android Studio
+
+<p>
+    <ol>
+        <li>Dựa trên IntelliJ IDEA: Android Studio được xây dựng dựa trên IntelliJ IDEA, một IDE phổ biến cho Java và nhiều ngôn ngữ lập trình khác. Điều này mang lại sự linh hoạt và hiệu suất cho nhà phát triển.</li>
+        <li>Hỗ trợ ngôn ngữ Kotlin: Kotlin là một ngôn ngữ lập trình được Google chính thức hỗ trợ cho việc phát triển ứng dụng Android. Android Studio cung cấp tích hợp đầy đủ cho việc phát triển ứng dụng bằng Kotlin.</li>
+        <li>Layout Editor: Android Studio có một trình soạn thảo giao diện người dùng mạnh mẽ giúp nhà phát triển thiết kế giao diện người dùng của ứng dụng một cách dễ dàng và nhanh chóng.</li>
+        <li>Emulator: Android Studio đi kèm với một trình giả lập Android tích hợp, cho phép nhà phát triển kiểm tra ứng dụng của mình trên nhiều thiết bị Android ảo khác nhau.</li>
+        <li>Debugging và Profiling: Android Studio cung cấp các công cụ mạnh mẽ để gỡ lỗi và phân tích hiệu suất của ứng dụng, giúp nhà phát triển tìm ra và sửa lỗi một cách dễ dàng.</li>
+        <li>Quản lý phiên bản: Android Studio tích hợp với Git và hỗ trợ quản lý phiên bản thông qua hệ thống kiểm soát phiên bản, cho phép nhà phát triển làm việc một cách hiệu quả với nhóm.</li>
+        <li>Cập nhật thường xuyên: Android Studio được cập nhật thường xuyên với các tính năng mới và sửa lỗi để đảm bảo rằng nhà phát triển có công cụ tốt nhất để phát triển ứng dụng Android.</li>
+    </ol>
+</p>
+<p align="right">(<a href="#readme-top">Trở về trên đầu</a>)</p>
+
+## Các bài thực hành đặc biệt
+
+### Ex1_Hello
+
+<p>Tạo máy ảo, chạy thử ứng dụng HelloWorld</p>
+
+<ol>
+    <li>
+        <b>Giao diện thiết kế trực quan</b></br>
+        <img src="Img/Ex1_1.png" alt="Img" width="auto" height="300" >
+    </li>
+    <li>
+        ```xml
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xin chào android"
+            android:textAllCaps="true"
+            android:textColor="#FF0707"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        ```
+    </li>
+</ol>
+<p align="right">(<a href="#readme-top">Trở về trên đầu</a>)</p>
+
+<br/>
+
+## Other
+
+![Static Badge](https://img.shields.io/badge/ASUS-blue?style=for-the-badge&logo=asus) ![Static Badge](https://img.shields.io/badge/GitHub-gray?style=for-the-badge&logo=github) ![Static Badge](https://img.shields.io/badge/Java-green?style=for-the-badge)![Static Badge](https://img.shields.io/badge/C%23-purple?style=for-the-badge&logo=C%23) ![Static Badge](https://img.shields.io/badge/HTML-orange?style=for-the-badge&logo=HTML5) ![Static Badge](https://img.shields.io/badge/CSS-magenta?style=for-the-badge&logo=Css3)
+[![Bootstrap][Bootstrap.com]][Bootstrap-url]
+
+[contributors-shield]: https://img.shields.io/github/contributors/nguyenduydan/63133615_JavaProgramming?color=blue
+[contributors-url]: https://github.com/nguyenduydan/63133615_JavaProgramming/graphs/contributors
+[language-count-shield]: https://img.shields.io/github/languages/count/nguyenduydan/63133615_JavaProgramming?color=red
+[license-shield]: https://img.shields.io/github/license/nguyenduydan/63133615_JavaProgramming
+[followers-shield]: https://img.shields.io/github/followers/nguyenduydan?style=flat
+[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[Bootstrap-url]: https://getbootstrap.com
