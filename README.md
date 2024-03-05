@@ -65,22 +65,15 @@
 <ol>
     <li>
         <b>Giao diện thiết kế trực quan</b></br>
-        <img src="Img/Ex1_1.png" alt="Img" width="auto" height="300" >
+        <img src="Img/Ex1_1.png" alt="Img" width="auto" height="auto" >
     </li>
     <li>
-        ```xml
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Xin chào android"
-            android:textAllCaps="true"
-            android:textColor="#FF0707"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-        ```
+        <b>Giao diện thiết kế dựa vào viết code</b></br>
+        <img src="Img/Ex1_3.png" alt="Img" width="auto" height="auto" >
+    </li>
+    <li>
+        <b>Giao diện khi chạy trên máy ảo</b></br>
+        <img src="Img/Ex1_2.png" alt="Img" width="auto" height="auto" >
     </li>
 </ol>
 <p align="right">(<a href="#readme-top">Trở về trên đầu</a>)</p>
