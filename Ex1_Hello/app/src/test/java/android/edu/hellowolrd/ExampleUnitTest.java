@@ -1,4 +1,4 @@
-package android.edu.ex1_hello;
+package android.edu.hellowolrd;
 
 import org.junit.Test;
 

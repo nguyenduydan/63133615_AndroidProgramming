@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "android.edu.ex1_hello"
+    namespace = "android.edu.hellowolrd"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "android.edu.ex1_hello"
+        applicationId = "android.edu.hellowolrd"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
