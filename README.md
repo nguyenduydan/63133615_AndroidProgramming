@@ -30,8 +30,8 @@
             <li><a href="#ex1_hello">Ex1_Hello</a></li>
             <li><a href="#ex2_linearlayout">Ex2_LinearLayout</a></li>
             <li><a href="#ex3_simplesumapp">Ex3_SimpleSumApp</a></li>
-            <!--<li><a href="#ex4_addsubmuldiv_onclick">Ex4_AddSubMulDiv_Onclick</a></li>
-            <li><a href="#ex5_addsubmuldiv_anynomous">Ex5_AddSubMulDiv_Anynomous</a></li>
+            <li><a href="#ex4_addsubmuldiv_onclick">Ex4_AddSubMulDiv_Onclick</a></li>
+            <!--<li><a href="#ex5_addsubmuldiv_anynomous">Ex5_AddSubMulDiv_Anynomous</a></li>
             <li><a href="#ex5_addsubmuldiv_var">Ex5+_AddSubMulDiv_Var</a></li> -->
         </ul>
     </li>
@@ -129,11 +129,42 @@
 
 <br/>
 
-<!-- ### Ex4_AddSubMulDiv_Onclick
+### Ex4_AddSubMulDiv_Onclick
+
+<span>Ứng dụng Cộng Trừ Nhân Chia:
+
+- (1) Hướng dẫn thiết kế layout (sử dụng bố cục LinearLayout). Sử dụng các view cơ bản để xây dựng dao diện cho App Tính các phép toán số học đơn giản
+
+- (2) Định nghĩa hàm xử lý ờ tệp Java và Khai báo hàm đó ở tệp Layout XML qua thuộc tính android:onClick="Hàm xử lý"
+  </span>
+
+<ol>
+    <li>
+        <b>Giao diện của phép tính lúc ban đầu</b></br>
+        <img src="Img/Ex4_1.png" alt="Img" width="auto" height="auto" >
+    </li>
+    <li>
+        <b>Kết quả của phép tính cộng</b></br>
+        <img src="Img/Ex4_cong.png" alt="Img" width="auto" height="auto" >
+    </li>
+    <li>
+        <b>Kết quả của phép tính trừ</b></br>
+        <img src="Img/Ex4_tru.png" alt="Img" width="auto" height="auto" >
+    </li>
+    <li>
+        <b>Kết quả của phép tính nhân</b></br>
+        <img src="Img/Ex4_nhan.png" alt="Img" width="auto" height="auto" >
+    </li>
+    <li>
+        <b>Kết quả của phép tính chia</b></br>
+        <img src="Img/Ex4_chia.png" alt="Img" width="auto" height="auto" >
+    </li>
+</ol>
+<p align="right">(<a href="#readme-top">Trở về trên đầu</a>)</p>
 
 <br/>
 
-### Ex5_AddSubMulDiv_Anynomous
+<!--### Ex5_AddSubMulDiv_Anynomous
 
 <br/>
 
