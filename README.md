@@ -29,8 +29,8 @@
         <ul>
             <li><a href="#ex1_hello">Ex1_Hello</a></li>
             <li><a href="#ex2_linearlayout">Ex2_LinearLayout</a></li>
-            <!-- <li><a href="#ex3_simplesumapp">Ex3_SimpleSumApp</a></li>
-            <li><a href="#ex4_addsubmuldiv_onclick">Ex4_AddSubMulDiv_Onclick</a></li>
+            <li><a href="#ex3_simplesumapp">Ex3_SimpleSumApp</a></li>
+            <!--<li><a href="#ex4_addsubmuldiv_onclick">Ex4_AddSubMulDiv_Onclick</a></li>
             <li><a href="#ex5_addsubmuldiv_anynomous">Ex5_AddSubMulDiv_Anynomous</a></li>
             <li><a href="#ex5_addsubmuldiv_var">Ex5+_AddSubMulDiv_Var</a></li> -->
         </ul>
