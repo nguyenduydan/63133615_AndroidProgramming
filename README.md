@@ -159,15 +159,49 @@
         <b>Kết quả của phép tính chia</b></br>
         <img src="Img/Ex4_chia.png" alt="Img" width="auto" height="auto" >
     </li>
+    <li>
+        <b>Code minh họa</b></br>
+        <img src="Img/Ex4_code.png" alt="Img" width="auto" height="auto" >
+    </li>
 </ol>
 <p align="right">(<a href="#readme-top">Trở về trên đầu</a>)</p>
 
 <br/>
 
-<!--### Ex5_AddSubMulDiv_Anynomous
+### Ex5_AddSubMulDiv_Anynomous
+<span>Đăng ký và sử dụng bộ lắng nghe ẩn danh để code lại app Cộng trừ nhân chia ở Ex4. Sử dụng giao diện app ở Ex4
+  </span>
 
+<ol>
+    <li>
+        <b>Giao diện của phép tính lúc ban đầu</b></br>
+        <img src="Img/Ex4_1.png" alt="Img" width="auto" height="auto" >
+    </li>
+    <li>
+        <b>Kết quả của phép tính cộng</b></br>
+        <img src="Img/Ex4_cong.png" alt="Img" width="auto" height="auto" >
+    </li>
+    <li>
+        <b>Kết quả của phép tính trừ</b></br>
+        <img src="Img/Ex4_tru.png" alt="Img" width="auto" height="auto" >
+    </li>
+    <li>
+        <b>Kết quả của phép tính nhân</b></br>
+        <img src="Img/Ex4_nhan.png" alt="Img" width="auto" height="auto" >
+    </li>
+    <li>
+        <b>Kết quả của phép tính chia</b></br>
+        <img src="Img/Ex4_chia.png" alt="Img" width="auto" height="auto" >
+    </li>
+    <li>
+        <b>Code minh họa</b></br>
+        <img src="Img/Ex_5.png" alt="Img" width="auto" height="auto" >
+    </li>
+</ol>
+<p align="right">(<a href="#readme-top">Trở về trên đầu</a>)</p>
 <br/>
 
+<!--
 ### Ex5+\_AddSubMulDiv_Var -->
 
 <br/>
