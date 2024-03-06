@@ -31,8 +31,8 @@
             <li><a href="#ex2_linearlayout">Ex2_LinearLayout</a></li>
             <li><a href="#ex3_simplesumapp">Ex3_SimpleSumApp</a></li>
             <li><a href="#ex4_addsubmuldiv_onclick">Ex4_AddSubMulDiv_Onclick</a></li>
-            <!--<li><a href="#ex5_addsubmuldiv_anynomous">Ex5_AddSubMulDiv_Anynomous</a></li>
-            <li><a href="#ex5_addsubmuldiv_var">Ex5+_AddSubMulDiv_Var</a></li> -->
+            <li><a href="#ex5_addsubmuldiv_anynomous">Ex5_AddSubMulDiv_Anynomous</a></li>
+            <!--<li><a href="#ex5_addsubmuldiv_var">Ex5+_AddSubMulDiv_Var</a></li> -->
         </ul>
     </li>
   </ol>
@@ -169,8 +169,9 @@
 <br/>
 
 ### Ex5_AddSubMulDiv_Anynomous
+
 <span>Đăng ký và sử dụng bộ lắng nghe ẩn danh để code lại app Cộng trừ nhân chia ở Ex4. Sử dụng giao diện app ở Ex4
-  </span>
+</span>
 
 <ol>
     <li>
