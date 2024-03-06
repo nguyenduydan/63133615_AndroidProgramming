@@ -28,6 +28,11 @@
         <a href="#các-bài-thực-hành-đặc-biệt">Các bài thực hành đặc biệt</a>
         <ul>
             <li><a href="#ex1_hello">Ex1_Hello</a></li>
+            <li><a href="#ex2_linearlayout">Ex2_LinearLayout</a></li>
+            <!-- <li><a href="#ex3_simplesumapp">Ex3_SimpleSumApp</a></li>
+            <li><a href="#ex4_addsubmuldiv_onclick">Ex4_AddSubMulDiv_Onclick</a></li>
+            <li><a href="#ex5_addsubmuldiv_anynomous">Ex5_AddSubMulDiv_Anynomous</a></li>
+            <li><a href="#ex5_addsubmuldiv_var">Ex5+_AddSubMulDiv_Var</a></li> -->
         </ul>
     </li>
   </ol>
@@ -77,6 +82,44 @@
     </li>
 </ol>
 <p align="right">(<a href="#readme-top">Trở về trên đầu</a>)</p>
+
+<br/>
+
+### Ex2_LinearLayout
+
+<p>Tạo ứng dụng thử nghiệm, demo bố cục màn hình Linear và ứng dụng tính tổng</p>
+
+<ol>
+    <li>
+        <b>Giao diện của phép tính cộng lúc ban đầu</b></br>
+        <img src="Img/Ex2_1.png" alt="Img" width="auto" height="auto" >
+    </li>
+    <li>
+        <b>Giao diện lúc nhập</b></br>
+        <img src="Img/Ex2_2.png" alt="Img" width="auto" height="auto" >
+    </li>
+    <li>
+        <b>Giao diện lúc hiển thị kết quả và ô kết quả không focus vào được</b></br>
+        <img src="Img/Ex2_3.png" alt="Img" width="auto" height="auto" >
+    </li>
+</ol>
+<p align="right">(<a href="#readme-top">Trở về trên đầu</a>)</p>
+
+<br/>
+
+<!-- ### Ex3_SimpleSumApp
+
+<br/>
+
+### Ex4_AddSubMulDiv_Onclick
+
+<br/>
+
+### Ex5_AddSubMulDiv_Anynomous
+
+<br/>
+
+### Ex5+\_AddSubMulDiv_Var -->
 
 <br/>
 
