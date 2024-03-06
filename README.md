@@ -107,11 +107,29 @@
 
 <br/>
 
-<!-- ### Ex3_SimpleSumApp
+### Ex3_SimpleSumApp
+
+<span>Ứng dụng tính tổng
+
+- (1) Thiết kết màn hình: Sử dụng constrainstLayout
+- (2) Xử lý backend: Bắt/Đáp ứng sự kiện bằng hàm xử lý cài đặt cho OnClick trên XML
+  </span>
+
+<ol>
+    <li>
+        <b>Giao diện của phép tính cộng lúc ban đầu</b></br>
+        <img src="Img/Ex3_1.png" alt="Img" width="auto" height="auto" >
+    </li>
+    <li>
+        <b>Giao diện lúc nhập và hiển thị ra kết quả</b></br>
+        <img src="Img/Ex3_2.png" alt="Img" width="auto" height="auto" >
+    </li>
+</ol>
+<p align="right">(<a href="#readme-top">Trở về trên đầu</a>)</p>
 
 <br/>
 
-### Ex4_AddSubMulDiv_Onclick
+<!-- ### Ex4_AddSubMulDiv_Onclick
 
 <br/>
 
