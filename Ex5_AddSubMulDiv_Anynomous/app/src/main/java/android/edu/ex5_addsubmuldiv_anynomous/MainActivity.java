@@ -83,6 +83,5 @@ public class MainActivity extends AppCompatActivity {
                 Kq.setText(chuoiKq);
             }
         });
-
     }
 }
