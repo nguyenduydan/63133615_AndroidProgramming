@@ -32,7 +32,7 @@
             <li><a href="#ex3_simplesumapp">Ex3_SimpleSumApp</a></li>
             <li><a href="#ex4_addsubmuldiv_onclick">Ex4_AddSubMulDiv_Onclick</a></li>
             <li><a href="#ex5_addsubmuldiv_anynomous">Ex5_AddSubMulDiv_Anynomous</a></li>
-            <!--<li><a href="#ex5_addsubmuldiv_var">Ex5+_AddSubMulDiv_Var</a></li> -->
+            <li><a href="#ex5_tinhtoanmorong">Ex5_TinhToanMoRong</a></li>
         </ul>
     </li>
   </ol>
@@ -212,8 +212,18 @@
 <p align="right">(<a href="#readme-top">Trở về trên đầu</a>)</p>
 <br/>
 
-<!--
-### Ex5+\_AddSubMulDiv_Var -->
+### Ex5_TinhToanMoRong
+
+<span>Dựa vào sự lắng nghe ẩn danh và các phép tính để tính toán diện tính và chu hình chữ nhật
+</span>
+
+[Source Code](https://github.com/nguyenduydan/63133615_AndroidProgramming/tree/main/Ex5_TinhToanMoRong/app/src/main)
+
+<b>Giao diện của phép tính lúc ban đầu</b></br>
+<img src="Img/Ex5_cv_dt.png" alt="Img" width="auto" height="auto" >
+
+<p align="right">(<a href="#readme-top">Trở về trên đầu</a>)</p>
+<br/>
 
 <br/>
 
