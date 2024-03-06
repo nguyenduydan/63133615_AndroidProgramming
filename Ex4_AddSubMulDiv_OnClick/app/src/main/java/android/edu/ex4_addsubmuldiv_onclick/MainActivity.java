@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         double numB = Double.parseDouble(valueB.getText().toString());
         double result;
         result = numA + numB;
-        String chuoiKq = String.valueOf((int) result);
+        String chuoiKq = String.valueOf(result);
         Kq.setText(chuoiKq);
     }
     //Hàm xử lý trừ
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         double numB = Double.parseDouble(valueB.getText().toString());
         double result;
         result = numA - numB;
-        String chuoiKq = String.valueOf((int)result);
+        String chuoiKq = String.valueOf(result);
         Kq.setText(chuoiKq);
     }
     //Hàm xử lý nhân
