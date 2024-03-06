@@ -67,6 +67,8 @@
 
 <p>Tạo máy ảo, chạy thử ứng dụng HelloWorld</p>
 
+[Source Code](https://github.com/nguyenduydan/63133615_AndroidProgramming/tree/main/Ex1_Hello/app/src/main)
+
 <ol>
     <li>
         <b>Giao diện thiết kế trực quan</b></br>
@@ -88,6 +90,8 @@
 ### Ex2_LinearLayout
 
 <p>Tạo ứng dụng thử nghiệm, demo bố cục màn hình Linear và ứng dụng tính tổng</p>
+
+[Source Code](https://github.com/nguyenduydan/63133615_AndroidProgramming/tree/main/Ex2_LinearLayout/app/src/main)
 
 <ol>
     <li>
@@ -115,6 +119,8 @@
 - (2) Xử lý backend: Bắt/Đáp ứng sự kiện bằng hàm xử lý cài đặt cho OnClick trên XML
   </span>
 
+[Source Code](https://github.com/nguyenduydan/63133615_AndroidProgramming/tree/main/Ex3_SimpleSumApp/app/src/main)
+
 <ol>
     <li>
         <b>Giao diện của phép tính cộng lúc ban đầu</b></br>
@@ -137,6 +143,8 @@
 
 - (2) Định nghĩa hàm xử lý ờ tệp Java và Khai báo hàm đó ở tệp Layout XML qua thuộc tính android:onClick="Hàm xử lý"
   </span>
+
+[Source Code](https://github.com/nguyenduydan/63133615_AndroidProgramming/tree/main/Ex4_AddSubMulDiv_OnClick/app/src/main)
 
 <ol>
     <li>
@@ -172,6 +180,8 @@
 
 <span>Đăng ký và sử dụng bộ lắng nghe ẩn danh để code lại app Cộng trừ nhân chia ở Ex4. Sử dụng giao diện app ở Ex4
 </span>
+
+[Source Code](https://github.com/nguyenduydan/63133615_AndroidProgramming/tree/main/Ex5_AddSubMulDiv_Anynomous/app/src/main)
 
 <ol>
     <li>
