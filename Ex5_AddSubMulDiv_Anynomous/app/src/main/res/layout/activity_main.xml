@@ -108,7 +108,6 @@
             android:text="+"
             android:paddingVertical="15dp"
             android:textColor="#F9D342"
-            android:onClick="XuLyCong"
             android:textSize="25dp" />
 
         <Button
@@ -121,7 +120,6 @@
             android:text="-"
             android:paddingVertical="15dp"
             android:textColor="#F9D342"
-            android:onClick="XuLyTru"
             android:textSize="25dp" />
 
         <Button
@@ -134,7 +132,6 @@
             android:backgroundTint="#292826"
             android:text="*"
             android:textColor="#F9D342"
-            android:onClick="XuLyNhan"
             android:textSize="25dp" />
 
         <Button
@@ -146,7 +143,6 @@
             android:paddingVertical="15dp"
             android:backgroundTint="#292826"
             android:text="/"
-            android:onClick="XuLyChia"
             android:textColor="#F9D342"
             android:textSize="25dp" />
     </LinearLayout>
