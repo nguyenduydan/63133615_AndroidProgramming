@@ -242,6 +242,9 @@
 <b>Giao diện của Calculator</b></br>
 <img src="Img/Cal.png" alt="Img" width="auto" height="auto" >
 
+<b>Giao diện của sau khi nhập nhiều kí tự</b></br>
+<img src="Img/Cal_decreaseText.png" alt="Img" width="auto" height="auto" >
+
 <p align="right">(<a href="#readme-top">Trở về trên đầu</a>)</p>
 
 ## Other
