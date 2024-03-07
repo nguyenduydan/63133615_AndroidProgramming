@@ -33,6 +33,7 @@
             <li><a href="#ex4_addsubmuldiv_onclick">Ex4_AddSubMulDiv_Onclick</a></li>
             <li><a href="#ex5_addsubmuldiv_anynomous">Ex5_AddSubMulDiv_Anynomous</a></li>
             <li><a href="#ex5_tinhtoanmorong">Ex5_TinhToanMoRong</a></li>
+            <li><a href="#calculator">Calculator</a></li>
         </ul>
     </li>
   </ol>
@@ -225,7 +226,21 @@
 <p align="right">(<a href="#readme-top">Trở về trên đầu</a>)</p>
 <br/>
 
-<br/>
+### Calculator
+
+<p>- Đây là dự án nhỏ mô phỏng máy tính bỏ túi dựa trên giao diện của máy tính Iphone</p>
+<p>- Là sự kết hợp những gì đã học về Java, Xml và Android Studio:</p>
+<ul>
+    <li>Thiết kế giao diện: ConstraintLayout và LinearLayout</li>
+    <li>Viết có cấu trúc</li>
+    <li>Xử lý bộ lắng nghe ẩn danh</li>
+    <li>Xử lý các phép tính đơn giản</li>
+</ul>
+
+<b>Giao diện của Calculator</b></br>
+<img src="Img/Cal.png" alt="Img" width="auto" height="auto" >
+
+<p align="right">(<a href="#readme-top">Trở về trên đầu</a>)</p>
 
 ## Other
 
