@@ -17,7 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     //Khai báo biến
-    Button btn0,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9;
+    Button btn0,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btnDel_All,btnDel;
     EditText displayText;
     void findControl(){
         btn0 = (Button) findViewById(R.id.btn0);
@@ -30,7 +30,10 @@ public class MainActivity extends AppCompatActivity {
         btn7 = (Button) findViewById(R.id.btn7);
         btn8 = (Button) findViewById(R.id.btn8);
         btn9 = (Button) findViewById(R.id.btn9);
+        btnDel_All = (Button) findViewById(R.id.btnXoaAll);
+        btnDel = (Button) findViewById(R.id.btnXoa);
         displayText = (EditText) findViewById(R.id.edtResult);
+        displayText.setSelection(displayText.getText().length());
     }
 
     @Override
@@ -38,45 +41,29 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+
+
+        //Các phương thức
         findControl();
+        change_TextEdit();
+        setOnClick();
+        del();
 
-        //Giảm kích thước văn bản khi nhiều kí tự
-        displayText.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                // No need to implement anything here
-            }
+    }
 
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                // No need to implement anything here
-            }
+    // Phương thức để thêm số vào EditText
+    private void appendNumberToDisplay(String number) {
+        String currentText = displayText.getText().toString();
+        if("0".equals(currentText)) //Kiểm tra xem có số 0 ban đầu không
+        {
+            displayText.setText(number);
+        }else {
+            displayText.setText(currentText + number);
+        }
+    }
 
-            @Override
-            public void afterTextChanged(Editable s) {
-                // Giới hạn số lượng ký tự
-                int maxLength = 12; // Số ký tự tối đa bạn muốn cho phép
-                if (s.length() > maxLength) {
-                    displayText.setText(s.subSequence(0, maxLength));
-                    displayText.setSelection(maxLength);
-                }
-
-                // Giảm kích thước văn bản khi chế độ RTL
-                float defaultTextSize = 80; // Kích thước văn bản mặc định
-                float minTextSize = 50; // Kích thước văn bản tối thiểu
-                float textSizeStep = 5.0f; // Bước giảm kích thước văn bản
-
-                if (s.length() > maxLength / 2) {
-                    float newSize = defaultTextSize - ((s.length() - maxLength / 2) * textSizeStep);
-                    if (newSize < minTextSize) newSize = minTextSize;
-                    displayText.setTextSize(newSize);
-                } else {
-                    displayText.setTextSize(defaultTextSize);
-                }
-            }
-        });
-
-        //Gắn bộ lắng nghe
+    //Gắn bộ lắng nghe
+    void setOnClick(){
         btn0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -139,14 +126,67 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    // Phương thức để thêm số vào EditText
-    private void appendNumberToDisplay(String number) {
-        String currentText = displayText.getText().toString();
-        if("0".equals(currentText)) //Kiểm tra xem có số 0 ban đầu không
-        {
-            displayText.setText(number);
-        }else {
-            displayText.setText(currentText + number);
-        }
+    // Phương thức chinh sửa văn bản khi nhiều kí tự
+    void change_TextEdit(){
+        displayText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // No need to implement anything here
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // No need to implement anything here
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                displayText.setSelection(displayText.getText().length());
+                // Giới hạn số lượng ký tự
+                int maxLength = 10; // Số ký tự tối đa bạn muốn cho phép
+                if (s.length() > maxLength) {
+                    displayText.setText(s.subSequence(0, maxLength));
+                    displayText.setSelection(maxLength);
+                }
+
+                // Giảm kích thước văn bản khi chế độ RTL
+                float defaultTextSize = 80; // Kích thước văn bản mặc định
+                float minTextSize = 60; // Kích thước văn bản tối thiểu
+                float textSizeStep = 5.0f; // Bước giảm kích thước văn bản
+
+                if (s.length() > maxLength / 2) {
+                    float newSize = defaultTextSize - ((s.length() - maxLength / 2) * textSizeStep);
+                    if (newSize < minTextSize) newSize = minTextSize;
+                    displayText.setTextSize(newSize);
+                } else {
+                    displayText.setTextSize(defaultTextSize);
+                }
+            }
+        });
+    }
+
+    // Phương thức xóa
+    void del(){
+        //Xóa tất cả phần tử
+        btnDel_All.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayText.setText("0");
+            }
+        });
+
+        //Xóa từng phần tử
+        btnDel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Xóa ký tự từ vị trí hiện tại của con trỏ
+                int length = displayText.length();
+                if (length > 1) {
+                    displayText.getText().delete(length - 1, length);
+                }else{
+                    displayText.setText("0");
+                }
+            }
+        });
     }
 }
