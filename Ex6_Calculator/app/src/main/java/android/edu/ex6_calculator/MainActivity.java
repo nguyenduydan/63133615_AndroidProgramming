@@ -1,6 +1,9 @@
 package android.edu.ex6_calculator;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -36,6 +39,42 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         findControl();
+
+        //Giảm kích thước văn bản khi nhiều kí tự
+        displayText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // No need to implement anything here
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // No need to implement anything here
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                // Giới hạn số lượng ký tự
+                int maxLength = 12; // Số ký tự tối đa bạn muốn cho phép
+                if (s.length() > maxLength) {
+                    displayText.setText(s.subSequence(0, maxLength));
+                    displayText.setSelection(maxLength);
+                }
+
+                // Giảm kích thước văn bản khi chế độ RTL
+                float defaultTextSize = 80; // Kích thước văn bản mặc định
+                float minTextSize = 50; // Kích thước văn bản tối thiểu
+                float textSizeStep = 5.0f; // Bước giảm kích thước văn bản
+
+                if (s.length() > maxLength / 2) {
+                    float newSize = defaultTextSize - ((s.length() - maxLength / 2) * textSizeStep);
+                    if (newSize < minTextSize) newSize = minTextSize;
+                    displayText.setTextSize(newSize);
+                } else {
+                    displayText.setTextSize(defaultTextSize);
+                }
+            }
+        });
 
         //Gắn bộ lắng nghe
         btn0.setOnClickListener(new View.OnClickListener() {
