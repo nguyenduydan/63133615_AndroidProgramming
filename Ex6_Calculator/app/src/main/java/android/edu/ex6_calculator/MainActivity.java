@@ -276,8 +276,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void Cal_Result(String operand){
-        String num_value = displayText.getText().toString();
-        Double num = Double.parseDouble(num_value);
+        // Kiểm tra nếu không có dữ liệu được nhập
+        if (operands.isEmpty() || displayText.getText().toString().isEmpty()) {
+            return; // Không làm gì cả
+        }
+
+        Double num = Double.parseDouble(displayText.getText().toString());
         Double kq = null;
         Double num_operands = Double.parseDouble(operands);
 
@@ -300,6 +304,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
         }
+
         // Kiểm tra nếu kết quả là số nguyên
         if (isInteger(kq)) {
             displayText.setText(String.valueOf(kq.intValue())); // Hiển thị số nguyên
@@ -307,6 +312,7 @@ public class MainActivity extends AppCompatActivity {
             displayText.setText(String.valueOf(kq)); // Hiển thị số thực
         }
     }
+
     // Phương thức kiểm tra xem một số có phải là số nguyên hay không
     boolean isInteger(Double number) {
         return number == Math.floor(number) && !Double.isInfinite(number);
