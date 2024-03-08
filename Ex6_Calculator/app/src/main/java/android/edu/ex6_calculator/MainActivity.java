@@ -1,24 +1,39 @@
 package android.edu.ex6_calculator;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
     //Khai báo biến
-    Button btn0,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btnDel_All,btnDel;
+    Button btn0,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9;
+    Button btnDel_All,btnDel,btnAdd,btnSub,btnMul,btnDiv,btnResult;
     EditText displayText;
+    boolean btnOnClicked = false;
+    String operands = new String();
+    String operand;
+
+    // Phương thức để đặt lại trạng thái ban đầu của nút btnAdd
+    void resetBtnAddState() {
+        btnAdd.setBackgroundColor(Color.parseColor("#FA9D12"));
+        btnAdd.setTextColor(Color.WHITE);
+        btnSub.setBackgroundColor(Color.parseColor("#FA9D12"));
+        btnSub.setTextColor(Color.WHITE);
+        btnMul.setBackgroundColor(Color.parseColor("#FA9D12"));
+        btnMul.setTextColor(Color.WHITE);
+        btnDiv.setBackgroundColor(Color.parseColor("#FA9D12"));
+        btnDiv.setTextColor(Color.WHITE);
+        // Đặt cờ về false khi nút btnAdd được thiết lập lại
+        btnOnClicked = false;
+    }
     void findControl(){
         btn0 = (Button) findViewById(R.id.btn0);
         btn1 = (Button) findViewById(R.id.btn1);
@@ -32,6 +47,11 @@ public class MainActivity extends AppCompatActivity {
         btn9 = (Button) findViewById(R.id.btn9);
         btnDel_All = (Button) findViewById(R.id.btnXoaAll);
         btnDel = (Button) findViewById(R.id.btnXoa);
+        btnAdd = (Button) findViewById(R.id.btnAdd);
+        btnSub = (Button) findViewById(R.id.btnSub);
+        btnMul = (Button) findViewById(R.id.btnMul);
+        btnDiv = (Button) findViewById(R.id.btnDiv);
+        btnResult = (Button) findViewById(R.id.btnEqual);
         displayText = (EditText) findViewById(R.id.edtResult);
         displayText.setSelection(displayText.getText().length());
     }
@@ -48,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
         change_TextEdit();
         setOnClick();
         del();
+        onClick_ToanHang();
 
     }
 
@@ -68,59 +89,69 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 appendNumberToDisplay("0");
+                resetBtnAddState();
             }
         });
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                resetBtnAddState();
                 appendNumberToDisplay("1");
             }
         });
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                resetBtnAddState();
                 appendNumberToDisplay("2");
             }
         });
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                resetBtnAddState();
                 appendNumberToDisplay("3");
             }
         });
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                resetBtnAddState();
                 appendNumberToDisplay("4");
             }
         });
         btn5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                resetBtnAddState();
                 appendNumberToDisplay("5");
             }
         });
         btn6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                resetBtnAddState();
                 appendNumberToDisplay("6");
             }
         });
         btn7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                resetBtnAddState();
                 appendNumberToDisplay("7");
             }
         });
         btn8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                resetBtnAddState();
                 appendNumberToDisplay("8");
             }
         });
         btn9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                resetBtnAddState();
                 appendNumberToDisplay("9");
             }
         });
@@ -143,14 +174,14 @@ public class MainActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
                 displayText.setSelection(displayText.getText().length()); // để vị trí con trỏ luôn qua bên phải của chuỗi
                 // Giới hạn số lượng ký tự
-                int maxLength = 10; // Số ký tự tối đa bạn muốn cho phép
+                int maxLength = 14; // Số ký tự tối đa bạn muốn cho phép
                 if (s.length() > maxLength) {
                     displayText.setText(s.subSequence(0, maxLength));
                     displayText.setSelection(maxLength);
                 }
                 // Giảm kích thước văn bản khi chế độ RTL
                 float defaultTextSize = 80; // Kích thước văn bản mặc định
-                float minTextSize = 60; // Kích thước văn bản tối thiểu
+                float minTextSize = 45; // Kích thước văn bản tối thiểu
                 float textSizeStep = 5.0f; // Bước giảm kích thước văn bản
 
                 if (s.length() > maxLength / 2) {
@@ -171,6 +202,7 @@ public class MainActivity extends AppCompatActivity {
         btnDel_All.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                operands = null;
                 displayText.setText("0");
             }
         });
@@ -189,4 +221,86 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    void onClick_ToanHang(){
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                operand = "+";
+                setColor(btnAdd);
+            }
+        });
+        btnSub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                operand = "-";
+                setColor(btnSub);
+            }
+        });
+        btnMul.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                operand = "*";
+                setColor(btnMul);
+            }
+        });
+        btnDiv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                operand = "/";
+                setColor(btnDiv);
+            }
+        });
+
+        btnResult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(btnOnClicked) {
+                    //Nothing
+                }else{
+                    Cal_Result(operand);
+                }
+            }
+        });
+    }
+    void setColor(Button btnClicked){
+        // Kiểm tra xem trước đó đã có nút btnAdd được bấm chưa
+        if (!btnOnClicked) {
+            // Nếu chưa, thực hiện hành động và đặt cờ là true
+            btnClicked.setBackgroundColor(Color.WHITE);
+            btnClicked.setTextColor(Color.parseColor("#FA9D12"));
+            operands = displayText.getText().toString();
+            displayText.setText("");
+            btnOnClicked = true;
+        }
+    }
+
+    void Cal_Result(String operand){
+        String num_value = displayText.getText().toString();
+        Double num = Double.parseDouble(num_value);
+        Double kq = null;
+        Double num_operands = Double.parseDouble(operands);
+
+        switch (operand) {
+            case "+":
+                kq = num_operands + num;
+                break;
+            case "-":
+                kq = num_operands - num;
+                break;
+            case "*":
+                kq = num_operands * num;
+                break;
+            case "/":
+                if (num != 0) {
+                    kq = num_operands / num;
+                } else {
+                    displayText.setText("Error");
+                    return;
+                }
+                break;
+        }
+        displayText.setText(String.valueOf(kq));
+    }
+
 }
