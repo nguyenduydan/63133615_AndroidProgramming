@@ -300,7 +300,15 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
         }
-        displayText.setText(String.valueOf(kq));
+        // Kiểm tra nếu kết quả là số nguyên
+        if (isInteger(kq)) {
+            displayText.setText(String.valueOf(kq.intValue())); // Hiển thị số nguyên
+        } else {
+            displayText.setText(String.valueOf(kq)); // Hiển thị số thực
+        }
     }
-
+    // Phương thức kiểm tra xem một số có phải là số nguyên hay không
+    boolean isInteger(Double number) {
+        return number == Math.floor(number) && !Double.isInfinite(number);
+    }
 }
