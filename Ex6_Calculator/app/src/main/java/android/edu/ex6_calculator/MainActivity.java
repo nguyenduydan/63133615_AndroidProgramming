@@ -141,14 +141,13 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                displayText.setSelection(displayText.getText().length());
+                displayText.setSelection(displayText.getText().length()); // để vị trí con trỏ luôn qua bên phải của chuỗi
                 // Giới hạn số lượng ký tự
                 int maxLength = 10; // Số ký tự tối đa bạn muốn cho phép
                 if (s.length() > maxLength) {
                     displayText.setText(s.subSequence(0, maxLength));
                     displayText.setSelection(maxLength);
                 }
-
                 // Giảm kích thước văn bản khi chế độ RTL
                 float defaultTextSize = 80; // Kích thước văn bản mặc định
                 float minTextSize = 60; // Kích thước văn bản tối thiểu
@@ -161,6 +160,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     displayText.setTextSize(defaultTextSize);
                 }
+
             }
         });
     }
