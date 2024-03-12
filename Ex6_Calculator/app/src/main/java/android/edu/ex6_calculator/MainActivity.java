@@ -15,8 +15,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     //Khai báo biến
-    Button btn0,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9;
-    Button btnDel_All,btnDel,btnAdd,btnSub,btnMul,btnDiv,btnResult;
+    Button btn0,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btnPhay;
+    Button btnDel_All,btnDel,btnAdd,btnSub,btnMul,btnDiv,btnResult,btnPhanTram;
     EditText displayText;
     boolean btnOnClicked = false;
     String operands = new String();
@@ -46,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
         btn7 = (Button) findViewById(R.id.btn7);
         btn8 = (Button) findViewById(R.id.btn8);
         btn9 = (Button) findViewById(R.id.btn9);
+        btnPhay = (Button) findViewById(R.id.btnPhay);
+        btnPhanTram = (Button) findViewById(R.id.btnPhanTram);
         btnDel_All = (Button) findViewById(R.id.btnXoaAll);
         btnDel = (Button) findViewById(R.id.btnXoa);
         btnAdd = (Button) findViewById(R.id.btnAdd);
@@ -156,6 +158,13 @@ public class MainActivity extends AppCompatActivity {
                 appendNumberToDisplay("9");
             }
         });
+        btnPhay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                resetBtnAddState();
+                appendNumberToDisplay(".");
+            }
+        });
     }
 
     // Phương thức chinh sửa văn bản khi nhiều kí tự
@@ -252,7 +261,6 @@ public class MainActivity extends AppCompatActivity {
                 setColor(btnDiv);
             }
         });
-
         btnResult.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -261,6 +269,16 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                     Cal_Result(operand);
                 }
+            }
+        });
+        btnPhanTram.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                double result = 0;
+                String values = displayText.getText().toString();
+                Double num_values = Double.parseDouble(values);
+                result = num_values / 100;
+                displayText.setText(String.valueOf(result));
             }
         });
     }

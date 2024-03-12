@@ -173,7 +173,7 @@
         <Button
             android:id="@+id/btn0"
             android:layout_width="190dp"
-            android:layout_height="100dp"
+            android:layout_height="95sp"
             android:backgroundTint="#3C3C3C"
             android:text="0"
             android:textSize="30dp"
