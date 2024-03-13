@@ -35,6 +35,7 @@
             <li><a href="#ex5_tinhtoanmorong">Ex5_TinhToanMoRong</a></li>
             <li><a href="#calculator">Calculator</a></li>
             <li><a href="#bmi_calculator">BMI_Calculator</a></li>
+            <li><a href="#ứng-dụng-listview">Ứng dụng ListView </a></li>
         </ul>
     </li>
   </ol>
@@ -269,6 +270,28 @@
 <img src="Img/bmi_3.png" alt="Img" width="auto" height="auto" >
 <img src="Img/bmi_4.png" alt="Img" width="auto" height="auto" >
 <img src="Img/bmi_5.png" alt="Img" width="auto" height="auto" >
+
+<p align="right">(<a href="#readme-top">Trở về trên đầu</a>)</p>
+
+### Ứng dụng ListView
+
+<p>Bài này sử dụng ListView và các thực hành luôn phần Material Design để làm ra bài hiển thị danh sách món ăn.</p>
+<p>- Là sự kết hợp những gì đã học về Java, Xml và Android Studio:</p>
+<ul>
+    <li>Thiết kế giao diện: ConstraintLayout và ListView</li>
+    <li>Viết có cấu trúc</li>
+    <li>Xử lý bộ lắng nghe ẩn danh</li>
+</ul>
+
+[Source Code](https://github.com/nguyenduydan/63133615_AndroidProgramming/tree/main/BMI_Calculator/app/src/main)
+
+<b>Giao diện của ban đầu của danh sách</b></br>
+<img src="Img/dsMonAn_gd.png" alt="Img" width="auto" height="auto" >
+
+<b>Giao diện của các kết quả khác nhau</b></br>
+<img src="Img/dsmonan_them.png" alt="Img" width="auto" height="auto" > </br>
+<img src="Img/dsmonan_edit.png" alt="Img" width="auto" height="auto" > </br>
+<img src="Img/dsmonan_xoa.png" alt="Img" width="auto" height="auto" > </br>
 
 <p align="right">(<a href="#readme-top">Trở về trên đầu</a>)</p>
 
