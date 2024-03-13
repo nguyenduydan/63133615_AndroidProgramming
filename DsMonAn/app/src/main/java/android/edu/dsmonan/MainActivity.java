@@ -79,12 +79,32 @@ public class MainActivity extends AppCompatActivity {
         btn_Edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dsMonAn.set(vitri,edtName.getText().toString());
-                adapter_MonAn.notifyDataSetChanged();
-                Toast.makeText(MainActivity.this, "Cập nhật thành công!", Toast.LENGTH_LONG).show();
-                edtName.setText("");
+                String str_NameMonAn = edtName.getText().toString();
+                if(!str_NameMonAn.equals("")){
+                    dsMonAn.set(vitri,edtName.getText().toString());
+                    adapter_MonAn.notifyDataSetChanged();
+                    Toast.makeText(MainActivity.this, "Cập nhật thành công!", Toast.LENGTH_LONG).show();
+                    edtName.setText("");
+                }else {
+                    Toast.makeText(MainActivity.this, "Vui lòng chọn món để sửa!", Toast.LENGTH_LONG).show();
+                }
             }
         });
-        
+
+        btn_Del.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String str_NameMonAn = edtName.getText().toString();
+                if(!str_NameMonAn.equals("")){
+                    dsMonAn.remove(vitri);
+                    adapter_MonAn.notifyDataSetChanged();
+                    edtName.setText("");
+                    Toast.makeText(MainActivity.this, "Xóa thành công!", Toast.LENGTH_LONG).show();
+                }else {
+                    Toast.makeText(MainActivity.this, "Vui lòng chọn món để xóa!", Toast.LENGTH_LONG).show();
+                }
+
+            }
+        });
     }
 }
