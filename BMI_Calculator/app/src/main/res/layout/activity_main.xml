@@ -11,7 +11,7 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="90sp"
+        android:layout_height="110sp"
         android:paddingBottom="5sp"
         android:background="#1E88E5"
         android:gravity="center|bottom"
@@ -24,7 +24,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100sp"
+        android:layout_marginTop="50sp"
         android:orientation="vertical">
 
         <EditText
@@ -33,7 +33,7 @@
             android:layout_height="50sp"
             android:layout_gravity="center"
             android:hint="Nhập chiều cao"
-            android:inputType="number"
+            android:inputType="text"
             android:paddingHorizontal="10sp"
             android:textAlignment="center"
             android:textSize="25sp" />
@@ -45,27 +45,49 @@
             android:layout_gravity="center"
             android:layout_marginTop="40sp"
             android:hint="Nhập cân nặng"
-            android:inputType="number"
+            android:inputType="text"
             android:paddingHorizontal="10sp"
             android:textAlignment="center"
             android:textSize="25sp" />
 
-        <Button
-            android:layout_width="150sp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="40sp"
-            android:backgroundTint="@color/black"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
             android:gravity="center"
-            android:paddingHorizontal="10sp"
-            android:paddingVertical="10sp"
-            android:text="Tính"
-            android:textSize="30sp" />
+            android:layout_marginTop="20sp"
+            >
+
+            <Button
+                android:id="@+id/btnResult"
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#1E88E5"
+                android:gravity="center"
+                android:paddingHorizontal="10sp"
+                android:paddingVertical="10sp"
+                android:text="Tính"
+                android:textSize="30sp"
+                android:layout_marginRight="20sp"
+                />
+
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FF0000"
+                android:gravity="center"
+                android:paddingHorizontal="10sp"
+                android:paddingVertical="10sp"
+                android:textSize="30sp"
+                android:layout_marginRight="10sp"
+                android:text="Reset" />
+        </LinearLayout>
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView2"
+    <EditText
+        android:id="@+id/txtResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -74,6 +96,9 @@
         android:gravity="center"
         android:textSize="30sp"
         android:hint="Kết quả"
+        android:focusable="false"
+        android:clickable="false"
+        android:cursorVisible="false"
          />
 
 </LinearLayout>
