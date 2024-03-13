@@ -34,6 +34,7 @@
             <li><a href="#ex5_addsubmuldiv_anynomous">Ex5_AddSubMulDiv_Anynomous</a></li>
             <li><a href="#ex5_tinhtoanmorong">Ex5_TinhToanMoRong</a></li>
             <li><a href="#calculator">Calculator</a></li>
+            <li><a href="#bmi_calculator">BMI_Calculator</a></li>
         </ul>
     </li>
   </ol>
@@ -244,6 +245,30 @@
 
 <b>Giao diện của sau khi nhập nhiều kí tự</b></br>
 <img src="Img/Cal_decreaseText.png" alt="Img" width="auto" height="auto" >
+
+<p align="right">(<a href="#readme-top">Trở về trên đầu</a>)</p>
+
+### BMI_Calculator
+
+<p>Đây là bài tập tính chỉ số BMI của người Châu á. Chỉ số khối cơ thể (BMI - Body mass index) là một phép tính dựa trên chiều cao và cân nặng, giúp xác định xem một người có cân nặng chuẩn, nhẹ cân, thừa cân hay béo phì. BMI không đo trực tiếp lượng chất béo trong cơ thể, nhưng BMI có thể đánh giá tương đối về lượng chất béo trong cơ thể. Hơn nữa, BMI còn có liên quan đến nguy cơ mắc bệnh chuyển hóa hoặc nhiều bệnh lý khác nhau do tình trạng nhẹ cân hoặc béo phì.</p>
+<p>- Là sự kết hợp những gì đã học về Java, Xml và Android Studio:</p>
+<ul>
+    <li>Thiết kế giao diện: ConstraintLayout và LinearLayout</li>
+    <li>Viết có cấu trúc</li>
+    <li>Xử lý bộ lắng nghe ẩn danh</li>
+    <li>Xử lý các phép tính đơn giản</li>
+</ul>
+
+[Source Code](https://github.com/nguyenduydan/63133615_AndroidProgramming/tree/main/BMI_Calculator/app/src/main)
+
+<b>Giao diện của BMI Calculator</b></br>
+<img src="Img/bmi_1.png" alt="Img" width="auto" height="auto" >
+
+<b>Giao diện của các kết quả khác nhau</b></br>
+<img src="Img/bmi_2.png" alt="Img" width="auto" height="auto" >
+<img src="Img/bmi_3.png" alt="Img" width="auto" height="auto" >
+<img src="Img/bmi_4.png" alt="Img" width="auto" height="auto" >
+<img src="Img/bmi_5.png" alt="Img" width="auto" height="auto" >
 
 <p align="right">(<a href="#readme-top">Trở về trên đầu</a>)</p>
 
