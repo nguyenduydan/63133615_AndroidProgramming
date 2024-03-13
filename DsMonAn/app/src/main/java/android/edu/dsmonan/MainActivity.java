@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     ListView lvMonAn;
     EditText edtName;
     Button btn_Add, btn_Del, btn_Edit;
+    int vitri =-1;
     void findControl(){
         dsMonAn = new ArrayList<String>();
         lvMonAn = (ListView) findViewById(R.id.list_item);
@@ -71,8 +72,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 edtName.setText(dsMonAn.get(position));
+                vitri = position;
             }
         });
 
+        btn_Edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dsMonAn.set(vitri,edtName.getText().toString());
+                adapter_MonAn.notifyDataSetChanged();
+                Toast.makeText(MainActivity.this, "Cập nhật thành công!", Toast.LENGTH_LONG).show();
+                edtName.setText("");
+            }
+        });
+        
     }
 }
