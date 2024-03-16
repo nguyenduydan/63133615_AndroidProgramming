@@ -36,6 +36,7 @@
             <li><a href="#calculator">Calculator</a></li>
             <li><a href="#bmi_calculator">BMI_Calculator</a></li>
             <li><a href="#ứng-dụng-listview">Ứng dụng ListView </a></li>
+            <li><a href="#login-app">Login App</a></li>
         </ul>
     </li>
   </ol>
@@ -292,6 +293,15 @@
 <img src="Img/dsmonan_them.png" alt="Img" width="auto" height="auto" > </br>
 <img src="Img/dsmonan_edit.png" alt="Img" width="auto" height="auto" > </br>
 <img src="Img/dsmonan_xoa.png" alt="Img" width="auto" height="auto" > </br>
+
+<p align="right">(<a href="#readme-top">Trở về trên đầu</a>)</p>
+
+### Login App
+
+[Source Code](https://github.com/nguyenduydan/63133615_AndroidProgramming/tree/main/Login_App/app/src/main)
+
+<b>Giao diện ban đầu của APP</b></br>
+<img src="Img/loginapp_screen.png" alt="Img" width="auto" height="auto" >
 
 <p align="right">(<a href="#readme-top">Trở về trên đầu</a>)</p>
 
