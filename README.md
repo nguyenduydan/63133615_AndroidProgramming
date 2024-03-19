@@ -301,7 +301,9 @@
 [Source Code](https://github.com/nguyenduydan/63133615_AndroidProgramming/tree/main/Login_App/app/src/main)
 
 <b>Giao diện ban đầu của APP</b></br>
-<img src="Img/loginapp_screen.png" alt="Img" width="auto" height="auto" >
+<img src="Img/loginapp_screen.png" alt="Img" width="auto" height="auto" > </br>
+<b>Giao diện đăng nhập thành công</b></br>
+<img src="Img/login.png" alt="Img" width="auto" height="auto" >
 
 <p align="right">(<a href="#readme-top">Trở về trên đầu</a>)</p>
 
