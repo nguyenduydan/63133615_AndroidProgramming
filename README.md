@@ -37,6 +37,7 @@
             <li><a href="#bmi_calculator">BMI_Calculator</a></li>
             <li><a href="#ứng-dụng-listview">Ứng dụng ListView </a></li>
             <li><a href="#login-app">Login App</a></li>
+            <li><a href="#sum-quiz">Sum Quiz</a></li>
         </ul>
     </li>
   </ol>
@@ -306,6 +307,22 @@
 <img src="Img/login_register.png" alt="Img" width="auto" height="auto" > </br>
 <b>Giao diện đăng nhập thành công</b></br>
 <img src="Img/login.png" alt="Img" width="auto" height="auto" >
+
+<p align="right">(<a href="#readme-top">Trở về trên đầu</a>)</p>
+
+### Sum Quiz
+
+[Source Code](https://github.com/nguyenduydan/63133615_AndroidProgramming/tree/main/SumQuiz/app/src/main)
+
+<b>Giao diện app</b></br>
+<img src="Img/sum_1.png" alt="Img" width="auto" height="auto" > </br>
+<b>Giao diện random</b></br>
+<img src="Img/sum_random.png" alt="Img" width="auto" height="auto" > </br>
+<b>Giao diện khi chọn đáp án đúng</b></br>
+<img src="Img/sum_true.png" alt="Img" width="auto" height="auto" >
+</br>
+<b>Giao diện khi chọn đáp án sai</b></br>
+<img src="Img/sum_false.png" alt="Img" width="auto" height="auto" >
 
 <p align="right">(<a href="#readme-top">Trở về trên đầu</a>)</p>
 
