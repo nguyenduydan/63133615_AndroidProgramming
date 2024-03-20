@@ -300,8 +300,10 @@
 
 [Source Code](https://github.com/nguyenduydan/63133615_AndroidProgramming/tree/main/Login_App/app/src/main)
 
-<b>Giao diện ban đầu của APP</b></br>
+<b>Giao diện login</b></br>
 <img src="Img/loginapp_screen.png" alt="Img" width="auto" height="auto" > </br>
+<b>Giao diện Register</b></br>
+<img src="Img/login_register.png" alt="Img" width="auto" height="auto" > </br>
 <b>Giao diện đăng nhập thành công</b></br>
 <img src="Img/login.png" alt="Img" width="auto" height="auto" >
 
