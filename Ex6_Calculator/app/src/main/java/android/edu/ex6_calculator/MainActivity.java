@@ -336,4 +336,8 @@ public class MainActivity extends AppCompatActivity {
     boolean isInteger(Double number) {
         return number == Math.floor(number) && !Double.isInfinite(number);
     }
+
+    public void reset(){
+
+    }
 }
