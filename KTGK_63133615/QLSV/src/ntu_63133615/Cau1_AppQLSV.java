@@ -6,6 +6,7 @@ public class Cau1_AppQLSV {
 		// Hiển thị màn hình login trước
 		Login main = new Login();
 		main.setVisible(true);
+		main.setLocation(635,305); //set up cho cửa sổ nằm giữa màn hình FullHD
 	}
 
 }
