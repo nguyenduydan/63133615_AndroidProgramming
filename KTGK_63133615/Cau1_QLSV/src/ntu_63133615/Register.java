@@ -32,9 +32,8 @@ public class Register extends JFrame {
 	private JPasswordField txt_pass;
 	private HashMap<String, String> users;
 	
-	/**
-	 * Create the frame.
-	 */
+	
+	
 	public Register() {
 		users = new HashMap<>();
 		setResizable(false);
@@ -147,10 +146,13 @@ public class Register extends JFrame {
 	}
 	
 	public void Login() {
-		Login lg = new Login();
+		Login lg = new Login(this);
 		lg.setVisible(true);
 		lg.setLocation(635,305);
 		this.setVisible(false);
 	}
+	public HashMap<String, String> getUsers() {
+        return users;
+    }
 
 }

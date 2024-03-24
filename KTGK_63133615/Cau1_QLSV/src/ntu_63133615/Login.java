@@ -4,6 +4,7 @@ import java.awt.EventQueue;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.net.URL;
+import java.util.HashMap;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -31,12 +32,15 @@ public class Login extends JFrame {
 	private JPanel contentPane;
 	private JTextField txt_username;
 	private JPasswordField txt_pass;
+	private Register regiter;
+	
 	
 
 	/**
 	 * Create the frame.
 	 */
-	public Login() {
+	public Login(Register regiter) {
+		this.regiter = regiter;
 		setResizable(false);
 		setTitle("Đăng nhập");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -129,19 +133,23 @@ public class Login extends JFrame {
 	}
 	
 	public void Login() {
-	 	String username = txt_username.getText().toString();
-	    char[] passwordChars = txt_pass.getPassword();
-	    String password = new String(passwordChars); 
-		if (username.equals("admin") && password.equals("admin123")) {
-	        JOptionPane.showMessageDialog(null, "Đăng nhập thành công", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
-	        Interface_QLSV main = new Interface_QLSV();
-	        main.setVisible(true);
-	        main.setLocation(635,305);
-	        this.setVisible(false);
-	       
-	    } else {
-	        JOptionPane.showMessageDialog(null, "Đăng nhập thất bại", "Thông báo", JOptionPane.ERROR_MESSAGE);
-	    }
+	 String username = txt_username.getText();
+        String password = new String(txt_pass.getPassword());
+
+        HashMap<String, String> users = regiter.getUsers();
+        if (users.containsKey(username)) {
+            String savedPassword = users.get(username);
+            if (savedPassword.equals(password)) {
+                JOptionPane.showMessageDialog(null, "Đăng nhập thành công", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
+                Interface_QLSV qlsv = new Interface_QLSV();
+                qlsv.setVisible(true);
+                this.setVisible(false);
+            } else {
+                JOptionPane.showMessageDialog(null, "Sai mật khẩu", "Lỗi", JOptionPane.ERROR_MESSAGE);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Tên đăng nhập không tồn tại", "Lỗi", JOptionPane.ERROR_MESSAGE);
+        }
     }
 	
 	public void Register() {
