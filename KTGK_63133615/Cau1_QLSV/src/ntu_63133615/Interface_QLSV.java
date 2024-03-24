@@ -208,8 +208,7 @@ public class Interface_QLSV extends JFrame {
 		
 		table = new JTable();
 		table.setEnabled(false);
-		table.setAutoResizeMode(WIDTH);
-		table.getTableHeader().setReorderingAllowed(false);
+		table.getTableHeader().setReorderingAllowed(false); //Không cho phép di chuyển các cột
 		scrollPane.setViewportView(table);
 		table.setBorder(new EmptyBorder(0, 0, 0, 0));
 		table.setFont(new Font("JetBrains Mono Medium", Font.PLAIN, 16));
