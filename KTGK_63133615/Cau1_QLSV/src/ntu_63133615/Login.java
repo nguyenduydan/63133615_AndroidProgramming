@@ -106,6 +106,11 @@ public class Login extends JFrame {
 		contentPane.add(chckbxNewCheckBox);
 		
 		JButton btn_dangki = new JButton("Đăng kí");
+		btn_dangki.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Register();
+			}
+		});
 		btn_dangki.setBackground(new Color(233, 233, 233));
 		btn_dangki.setFont(new Font("JetBrains Mono", Font.BOLD, 16));
 		btn_dangki.setBounds(414, 383, 135, 30);
@@ -129,8 +134,19 @@ public class Login extends JFrame {
 	    String password = new String(passwordChars); 
 		if (username.equals("admin") && password.equals("admin123")) {
 	        JOptionPane.showMessageDialog(null, "Đăng nhập thành công", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
+	        Interface_QLSV main = new Interface_QLSV();
+	        main.setVisible(true);
+	        main.setLocation(635,305);
+	        this.setVisible(false);
+	       
 	    } else {
 	        JOptionPane.showMessageDialog(null, "Đăng nhập thất bại", "Thông báo", JOptionPane.ERROR_MESSAGE);
 	    }
     }
+	
+	public void Register() {
+		Register re = new Register();
+		re.setVisible(true);
+		this.setVisible(false);
+	}
 }

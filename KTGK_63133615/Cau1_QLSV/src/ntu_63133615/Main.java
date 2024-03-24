@@ -1,6 +1,6 @@
 package ntu_63133615;
 
-public class Cau1_AppQLSV {
+public class Main {
 
 	public static void main(String[] args) {
 		// Hiển thị màn hình login trước
