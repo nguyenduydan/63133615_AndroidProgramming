@@ -133,22 +133,27 @@ public class Login extends JFrame {
 	}
 	
 	public void Login() {
-	 String username = txt_username.getText();
+		
+		String username = txt_username.getText();
         String password = new String(txt_pass.getPassword());
 
         HashMap<String, String> users = regiter.getUsers();
-        if (users.containsKey(username)) {
-            String savedPassword = users.get(username);
-            if (savedPassword.equals(password)) {
-                JOptionPane.showMessageDialog(null, "Đăng nhập thành công", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
-                Interface_QLSV qlsv = new Interface_QLSV();
-                qlsv.setVisible(true);
-                this.setVisible(false);
+        if (users != null) {
+            if (users.containsKey(username)) {
+                String savedPassword = users.get(username);
+                if (savedPassword.equals(password)) {
+                    JOptionPane.showMessageDialog(null, "Đăng nhập thành công", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
+                    Interface_QLSV qlsv = new Interface_QLSV();
+                    qlsv.setVisible(true);
+                    this.setVisible(false);
+                } else {
+                    JOptionPane.showMessageDialog(null, "Sai mật khẩu", "Lỗi", JOptionPane.ERROR_MESSAGE);
+                }
             } else {
-                JOptionPane.showMessageDialog(null, "Sai mật khẩu", "Lỗi", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Tên đăng nhập không tồn tại", "Lỗi", JOptionPane.ERROR_MESSAGE);
             }
         } else {
-            JOptionPane.showMessageDialog(null, "Tên đăng nhập không tồn tại", "Lỗi", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Chưa có người dùng nào được đăng ký", "Lỗi", JOptionPane.ERROR_MESSAGE);
         }
     }
 	
