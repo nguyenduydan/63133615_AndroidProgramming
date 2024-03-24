@@ -208,14 +208,22 @@ public class Interface_QLSV extends JFrame {
 		
 		table = new JTable();
 		table.setEnabled(false);
+		table.setAutoResizeMode(WIDTH);
+		table.getTableHeader().setReorderingAllowed(false);
 		scrollPane.setViewportView(table);
 		table.setBorder(new EmptyBorder(0, 0, 0, 0));
-		table.setFont(new Font("JetBrains Mono Medium", Font.PLAIN, 18));
+		table.setFont(new Font("JetBrains Mono Medium", Font.PLAIN, 16));
 		boolean[] columnEditables = new boolean[] {
 				false
 		};
 		table.setModel(data);
 		table.getColumnModel().getColumn(0).setResizable(false);
+		table.getColumnModel().getColumn(1).setResizable(false);
+		table.getColumnModel().getColumn(2).setResizable(false);
+		table.getColumnModel().getColumn(3).setResizable(false);
+		table.getColumnModel().getColumn(4).setResizable(false);
+		table.getColumnModel().getColumn(5).setResizable(false);
+		table.getColumnModel().getColumn(6).setResizable(false);
 		table.getColumnModel().getColumn(0).setPreferredWidth(36);
 		table.getColumnModel().getColumn(0).setMaxWidth(968);
 		table.getColumnModel().getColumn(1).setPreferredWidth(109);
