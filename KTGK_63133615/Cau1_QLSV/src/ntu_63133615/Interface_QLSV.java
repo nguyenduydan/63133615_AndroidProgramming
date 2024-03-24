@@ -19,6 +19,7 @@ import java.net.URL;
 import java.util.Vector;
 
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 import java.awt.Font;
 import javax.swing.ImageIcon;
@@ -26,7 +27,12 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JRadioButton;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JScrollPane;
 
@@ -146,32 +152,33 @@ public class Interface_QLSV extends JFrame {
 		txt_email.setBounds(164, 504, 350, 35);
 		navbar.add(txt_email);
 		
-		JButton btnNewButton_1 = new JButton("Thêm");
-		btnNewButton_1.addActionListener(new ActionListener() {
+		JButton btn_them = new JButton("Thêm");
+		btn_them.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Stt++;
 				ThemSinhVien(Stt);
 			}
 		});
-		btnNewButton_1.setFont(new Font("JetBrains Mono Medium", Font.BOLD, 20));
-		btnNewButton_1.setForeground(new Color(255, 255, 255));
-		btnNewButton_1.setBackground(new Color(0, 209, 238));
-		btnNewButton_1.setBounds(41, 587, 120, 40);
-		navbar.add(btnNewButton_1);
+		btn_them.setFont(new Font("JetBrains Mono Medium", Font.BOLD, 20));
+		btn_them.setForeground(new Color(255, 255, 255));
+		btn_them.setBackground(new Color(0, 209, 238));
+		btn_them.setBounds(41, 587, 120, 40);
+		navbar.add(btn_them);
 		
-		JButton btnNewButton_1_1 = new JButton("Xóa");
-		btnNewButton_1_1.setForeground(Color.WHITE);
-		btnNewButton_1_1.setFont(new Font("JetBrains Mono Medium", Font.BOLD, 20));
-		btnNewButton_1_1.setBackground(new Color(255, 0, 0));
-		btnNewButton_1_1.setBounds(202, 587, 120, 40);
-		navbar.add(btnNewButton_1_1);
+		JButton btn_del = new JButton("Xóa");
 		
-		JButton btnNewButton_1_2 = new JButton("Sửa");
-		btnNewButton_1_2.setForeground(Color.WHITE);
-		btnNewButton_1_2.setFont(new Font("JetBrains Mono Medium", Font.BOLD, 20));
-		btnNewButton_1_2.setBackground(new Color(0, 255, 64));
-		btnNewButton_1_2.setBounds(363, 587, 120, 40);
-		navbar.add(btnNewButton_1_2);
+		btn_del.setForeground(Color.WHITE);
+		btn_del.setFont(new Font("JetBrains Mono Medium", Font.BOLD, 20));
+		btn_del.setBackground(new Color(255, 0, 0));
+		btn_del.setBounds(202, 587, 120, 40);
+		navbar.add(btn_del);
+		
+		JButton btn_sua = new JButton("Sửa");
+		btn_sua.setForeground(Color.WHITE);
+		btn_sua.setFont(new Font("JetBrains Mono Medium", Font.BOLD, 20));
+		btn_sua.setBackground(new Color(0, 255, 64));
+		btn_sua.setBounds(363, 587, 120, 40);
+		navbar.add(btn_sua);
 		
 		JPanel panel = new JPanel();
 		panel.setBounds(0, 0, 1530, 89);
@@ -228,6 +235,31 @@ public class Interface_QLSV extends JFrame {
 		table.getColumnModel().getColumn(1).setPreferredWidth(109);
 		table.getColumnModel().getColumn(2).setPreferredWidth(180);
 		table.getColumnModel().getColumn(6).setPreferredWidth(200);
+		
+		table.addMouseListener((MouseListener) new MouseAdapter() {
+		    @Override
+		    public void mouseClicked(MouseEvent e) {
+		        // Lấy rowIndex từ vị trí của sự kiện click
+		        int rowIndex = table.rowAtPoint(e.getPoint());
+		        // Kiểm tra nếu người dùng click vào một dòng hợp lệ
+		        if (rowIndex < 0) {
+		            // Xử lý rowIndex ở đây
+		        	JOptionPane.showMessageDialog(null, "Không có dữ liệu", "Lỗi", JOptionPane.ERROR_MESSAGE);
+		        }else {
+		        	HienThiThongTin(rowIndex);
+		        	btn_del.addActionListener(new ActionListener() {
+		    			public void actionPerformed(ActionEvent e) {
+		    				XoaSinhVien(rowIndex);
+		    			}
+		    		});
+		        	btn_sua.addActionListener(new ActionListener() {
+		    			public void actionPerformed(ActionEvent e) {
+		    				SuaSinhVien(rowIndex);
+		    			}
+		    		});
+		        }
+		    }
+		});
 	}
 	
 	// Phương thức để tạo mới một ImageIcon với kích thước mới
@@ -246,9 +278,10 @@ public class Interface_QLSV extends JFrame {
 	public void ThemSinhVien(int Stt) {
 		String hoTen, namSinh,diaChi,email;
 		int mssv;
-		int Sdt=054634555;
+		int Sdt;
 		hoTen = txt_hoten.getText();
 		mssv = Integer.parseInt(txt_mssv.getText());
+		Sdt = Integer.parseInt(txt_sdt.getText());
 		namSinh = txt_namsinh.getText();
 		diaChi = txt_diachi.getText();
 		email = txt_email.getText();
@@ -264,6 +297,72 @@ public class Interface_QLSV extends JFrame {
 		data.addRow(hangX);
 		//Cap nhat lai bang
 		data.fireTableDataChanged();
+		Reset();
+		JOptionPane.showMessageDialog(null, "Thêm dữ liệu thành công", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
+	}
+	
+	public void XoaSinhVien(int rowIndex) {
+		if(rowIndex >= 0 ) {
+			data.removeRow(rowIndex);
+			data.fireTableDataChanged();
+			Reset();
+			JOptionPane.showMessageDialog(null, "Xóa dữ liệu thành công", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
+		}else {
+			JOptionPane.showMessageDialog(null, "Không có dữ liệu", "Lỗi", JOptionPane.ERROR_MESSAGE);
+			
+		}
+	}
+	
+	public void SuaSinhVien(int rowIndex) {
+		if(rowIndex >= 0 && rowIndex < data.getRowCount()) {
+			String hoTen = txt_hoten.getText();
+	        int mssv = Integer.parseInt(txt_mssv.getText());
+	        int sdt = Integer.parseInt(txt_sdt.getText());
+	        String namSinh = txt_namsinh.getText();
+	        String diaChi = txt_diachi.getText();
+	        String email = txt_email.getText();
+	        // Cập nhật giá trị của hàng được chọn
+	        data.setValueAt(mssv, rowIndex, 1); // Cột MSSV
+	        data.setValueAt(hoTen, rowIndex, 2); // Cột Họ tên
+	        data.setValueAt(namSinh, rowIndex, 3); // Cột Năm sinh
+	        data.setValueAt(sdt, rowIndex, 4);
+	        data.setValueAt(diaChi, rowIndex, 6); // Cột Địa chỉ
+	        data.setValueAt(email, rowIndex, 5); // Cột Email
+			
+			data.fireTableDataChanged();
+			JOptionPane.showMessageDialog(null, "Cập nhật dữ liệu thành công", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
+			Reset();
+		}else {
+			JOptionPane.showMessageDialog(null, "Không có dữ liệu", "Lỗi", JOptionPane.ERROR_MESSAGE);
+			
+		}
+	}
+	
+	public void HienThiThongTin(int rowIndex) {
+		TableModel model = table.getModel();
+    	Object mssvValue = model.getValueAt(rowIndex, 1); // Giả sử columnIndex là chỉ số cột của MSSV
+	    Object hoTenValue = model.getValueAt(rowIndex, 2);
+	    Object namSinhValue = model.getValueAt(rowIndex, 3);
+	    Object SDTValue = model.getValueAt(rowIndex, 4);
+	    Object emailValue = model.getValueAt(rowIndex, 5);
+	    Object diachiValue = model.getValueAt(rowIndex, 6);
+	    
+	    String mssvString =  String.valueOf(mssvValue);
+	    String hoTenString= String.valueOf(hoTenValue);
+	    String namSinhString = String.valueOf(namSinhValue);
+	    String SDTString = String.valueOf(SDTValue);
+	    String emailString = String.valueOf(emailValue);
+	    String diachiString = String.valueOf(diachiValue);
+	    
+    	txt_hoten.setText(mssvString);
+		txt_mssv.setText(hoTenString);
+		txt_namsinh.setText(namSinhString);
+		txt_diachi.setText(diachiString);
+		txt_email.setText(emailString);
+		txt_sdt.setText(SDTString);
+	}
+	
+	public void Reset() {
 		txt_hoten.setText("");
 		txt_mssv.setText("");
 		txt_namsinh.setText("");
