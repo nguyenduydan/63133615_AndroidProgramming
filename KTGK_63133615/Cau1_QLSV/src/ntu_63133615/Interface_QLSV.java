@@ -354,8 +354,8 @@ public class Interface_QLSV extends JFrame {
 	    String emailString = String.valueOf(emailValue);
 	    String diachiString = String.valueOf(diachiValue);
 	    
-    	txt_hoten.setText(mssvString);
-		txt_mssv.setText(hoTenString);
+    	txt_hoten.setText(hoTenString);
+		txt_mssv.setText(mssvString);
 		txt_namsinh.setText(namSinhString);
 		txt_diachi.setText(diachiString);
 		txt_email.setText(emailString);
