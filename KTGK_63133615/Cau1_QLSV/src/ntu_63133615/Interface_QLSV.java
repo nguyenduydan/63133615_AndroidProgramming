@@ -249,6 +249,7 @@ public class Interface_QLSV extends JFrame {
 		        	HienThiThongTin(rowIndex);
 		        	btn_del.addActionListener(new ActionListener() {
 		    			public void actionPerformed(ActionEvent e) {
+		    				Stt = Stt -1;
 		    				XoaSinhVien(rowIndex);
 		    			}
 		    		});
@@ -306,6 +307,7 @@ public class Interface_QLSV extends JFrame {
 			data.removeRow(rowIndex);
 			data.fireTableDataChanged();
 			Reset();
+			
 			JOptionPane.showMessageDialog(null, "Xóa dữ liệu thành công", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
 		}else {
 			JOptionPane.showMessageDialog(null, "Không có dữ liệu", "Lỗi", JOptionPane.ERROR_MESSAGE);
