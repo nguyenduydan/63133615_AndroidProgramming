@@ -216,15 +216,61 @@
                         app:layout_constraintHorizontal_bias="0.975"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
-
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
             </LinearLayout>
-
-            <ListView
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="450dp">
-            </ListView>
+                android:layout_height="450dp"
+                >
 
+                <TableLayout
+                    android:id="@+id/tablelayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:shrinkColumns="0,1,2,3"
+                    android:background="@drawable/border"
+                    android:stretchColumns="0,1,2,3">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:background="@drawable/border"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="28dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border"
+                            android:text="MSNV"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Họ tên"
+                            android:background="@drawable/border"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border"
+                            android:text="Giới tính"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border"
+                            android:text="Tuổi"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+                    </TableRow>
+                </TableLayout>
+            </ScrollView>
             <TextView
                 android:id="@+id/textView7"
                 android:layout_width="match_parent"
