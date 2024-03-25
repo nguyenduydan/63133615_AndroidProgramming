@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -29,8 +30,8 @@ import java.util.Locale;
 
 
 public class MainActivity extends AppCompatActivity {
-    private Button btn_add, btn_del, btn_edit;
-    private TableLayout tableLayout;
+    private Button btn_add;
+    TableLayout tableLayout;
     private EditText edt_hoten;
     private Spinner chucvu;
     private int STT = 0;
@@ -40,8 +41,6 @@ public class MainActivity extends AppCompatActivity {
 
     void FindID(){
         btn_add = (Button) findViewById(R.id.btn_them);
-        btn_edit = (Button) findViewById(R.id.btn_sua);
-        btn_del = (Button) findViewById(R.id.btn_xoa);
         chucvu = (Spinner) findViewById(R.id.spinner);
         edt_hoten = (EditText) findViewById(R.id.edt_name);
         tableLayout = (TableLayout) findViewById(R.id.tablelayout);
@@ -60,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         Control();
         initDatePicker();
         dateButton.setText(getTodaysDate());
+
     }
 
     public void Control(){
@@ -114,9 +114,7 @@ public class MainActivity extends AppCompatActivity {
                 // Thêm TableRow vào TableLayout
                 tableLayout.addView(row);
                 edt_hoten.setText("");
-
             }
-
         });
     }
 

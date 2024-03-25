@@ -147,25 +147,8 @@
                     </RadioGroup>
 
                     <Button
-                        android:id="@+id/btn_sua"
-                        android:layout_width="120dp"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="12dp"
-                        android:background="@drawable/btn_sua"
-                        android:fontFamily="@font/lalezar"
-                        android:gravity="center"
-                        android:paddingHorizontal="5dp"
-                        android:paddingVertical="0dp"
-                        android:text="Sửa"
-                        style="@style/BUTTON"
-                        android:textSize="25dp"
-                        app:backgroundTint="@null"
-                        app:layout_constraintEnd_toStartOf="@+id/btn_xoa"
-                        app:layout_constraintStart_toEndOf="@+id/btn_them"
-                        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
-
-                    <Button
                         android:id="@+id/btn_them"
+                        style="@style/BUTTON"
                         android:layout_width="120dp"
                         android:layout_height="40dp"
                         android:layout_marginTop="12dp"
@@ -176,29 +159,9 @@
                         android:paddingVertical="0dp"
                         android:text="Thêm"
                         android:textSize="25dp"
-                        style="@style/BUTTON"
                         app:backgroundTint="@null"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.02"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
-
-                    <Button
-                        android:id="@+id/btn_xoa"
-                        android:layout_width="120dp"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="12dp"
-                        android:background="@drawable/btn_xoa"
-                        android:fontFamily="@font/lalezar"
-                        android:gravity="center"
-                        android:paddingHorizontal="5dp"
-                        android:paddingVertical="0dp"
-                        android:text="Xóa"
-                        style="@style/BUTTON"
-                        android:textSize="25dp"
-                        app:backgroundTint="@null"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.975"
+                        app:layout_constraintHorizontal_bias="0.539"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
@@ -238,6 +201,7 @@
                         android:layout_height="match_parent">
 
                         <TextView
+                            android:id="@+id/tvMSNV"
                             android:layout_width="28dp"
                             android:layout_height="wrap_content"
                             android:background="@drawable/border"
@@ -246,6 +210,7 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:id="@+id/tvHoten"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:text="Họ tên"
@@ -254,6 +219,7 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:id="@+id/tvGioitinh"
                             android:layout_width="10dp"
                             android:layout_height="wrap_content"
                             android:background="@drawable/border"
@@ -262,6 +228,7 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:id="@+id/tvTuoi"
                             android:layout_width="10dp"
                             android:layout_height="wrap_content"
                             android:background="@drawable/border"
