@@ -1,5 +1,6 @@
 package ntu.edu.cau2_quanlynhanvien;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.InputType;
@@ -43,6 +44,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(edtName.getText().toString().equals("admin") && edtPwd.getText().toString().equals("admin")){
                     Toast.makeText(LoginActivity.this, "Đăng nhập thành công!", Toast.LENGTH_LONG).show();
+                    Intent main = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(main);
                 }else{
                     Toast.makeText(LoginActivity.this, "Đăng nhập không thành công!",Toast.LENGTH_LONG).show();
                 }
