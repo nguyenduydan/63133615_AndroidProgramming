@@ -24,6 +24,7 @@
                     android:fontFamily="@font/lalezar"
                     android:gravity="center"
                     android:paddingTop="10dp"
+                    style="@style/EditTextStyle"
                     android:text="Quản lý nhân viên"
                     android:textSize="39dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -184,6 +185,7 @@
                         android:paddingHorizontal="5dp"
                         android:paddingVertical="0dp"
                         android:text="Sửa"
+                        style="@style/BUTTON"
                         android:textSize="25dp"
                         app:backgroundTint="@null"
                         app:layout_constraintEnd_toStartOf="@+id/btn_xoa"
@@ -202,6 +204,7 @@
                         android:paddingVertical="0dp"
                         android:text="Thêm"
                         android:textSize="25dp"
+                        style="@style/BUTTON"
                         app:backgroundTint="@null"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.02"
@@ -219,6 +222,7 @@
                         android:paddingHorizontal="5dp"
                         android:paddingVertical="0dp"
                         android:text="Xóa"
+                        style="@style/BUTTON"
                         android:textSize="25dp"
                         app:backgroundTint="@null"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -242,6 +246,7 @@
                 android:fontFamily="@font/dancing_script_bold"
                 android:textStyle="bold"
                 android:gravity="center"
+                style="@style/EditTextStyle"
                 android:text="©Nocopyright - Bản quyền bởi Fog" />
         </LinearLayout>
 

@@ -8,6 +8,10 @@
     <style name="Theme.Cau2_QuanLyNhanVien" parent="Base.Theme.Cau2_QuanLyNhanVien" />
     <style name="EditTextStyle">
         <item name="android:fontFamily">@font/lalezar</item>
+        <item name="android:textColor">@color/black</item>
         <!-- Các thuộc tính khác của EditText (nếu cần) -->
+    </style>
+    <style name="BUTTON">
+        <item name="android:textColor">@color/white</item>
     </style>
 </resources>
