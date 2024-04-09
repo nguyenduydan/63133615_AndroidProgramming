@@ -37,12 +37,12 @@ public class LandScapeAdapter extends RecyclerView.Adapter<LandScapeAdapter.Item
         LandScape landScapeShow =  lstData.get(position);
         // Trích thông tin
         String caption = landScapeShow.getLandscapeCaption();
-        String tenAnh = landScapeShow.getLandscapeImg();
+        String tenFileAnh = landScapeShow.getLandscapeImg();
         //Đặt vào các trường thông tin của holder
         holder.tvCaption.setText(caption);
             //Đặt ảnh
             String packageName = holder.itemView.getContext().getPackageName();
-            int imgId = holder.itemView.getResources().getIdentifier(tenAnh,"mipmap",packageName);
+            int imgId = holder.itemView.getResources().getIdentifier(tenFileAnh,"mipmap",packageName);
         holder.ivLandScape.setImageResource(imgId);
     }
 

@@ -5,7 +5,7 @@ public class LandScape {
     String landscapeImg; //Đại diện cho file ảnh
 
 
-    public LandScape(String landscapeCaption, String landscapeImg) {
+    public LandScape(String landscapeImg, String landscapeCaption) {
         this.landscapeCaption = landscapeCaption;
         this.landscapeImg = landscapeImg;
     }
