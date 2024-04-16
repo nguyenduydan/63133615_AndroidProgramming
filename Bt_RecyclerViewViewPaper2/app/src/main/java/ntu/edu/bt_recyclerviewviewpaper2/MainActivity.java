@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerLand);
         //5. Tạo layout manager để đặt bố cục cho Recycler
         RecyclerView.LayoutManager layoutLinearHorizontal = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerView.setLayoutManager(layoutLinearHorizontal);
         //6. Tạo adapter gắn với nguồn dữ liệu
         landScapeAdapter = new LandScapeAdapter(this, recyclerViewDatas);
         //7. Gắn adapter với Recycler
