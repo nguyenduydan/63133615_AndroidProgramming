@@ -32,13 +32,13 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<ExamData>getData(){
         ArrayList<ExamData> list = new ArrayList<>();
         list.add(new ExamData("First Exam",
-                "May 23, 2015",
+                "29 - 5 - 2024",
                 "Best Of Luck"));
         list.add(new ExamData("Second Exam",
-                "June 09, 2015",
+                "15 - 09 - 2024",
                 "b of l"));
         list.add(new ExamData("My Test Exam",
-                "April 27, 2017",
+                "7 - 12 - 2024",
                 "This is testing exam .."));
 
         return list;
