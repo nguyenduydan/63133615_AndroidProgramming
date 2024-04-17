@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
         landScapeAdapter = new LandScapeAdapter(this, recyclerViewDatas);
         //7. Gắn adapter với Recycler
         recyclerView.setAdapter(landScapeAdapter);
-
     }
 
     ArrayList<LandScape> getDataForRecyclerView(){
