@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="507dp"
+            android:src="@drawable/img" />
+
+        <TextView
+            android:id="@+id/welcome_ch_"
+            android:layout_width="237dp"
+            android:layout_height="73dp"
+            android:layout_marginHorizontal="78dp"
+            android:layout_marginTop="100dp"
+            android:gravity="left"
+            android:text="Welcome"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:layout_marginHorizontal="78dp"
+            android:layout_marginTop="137dp"
+            android:gravity="left"
+            android:text="Chào mừng bạn đến với app QuizHappy"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="italic" />
+
+        <LinearLayout
+            android:id="@+id/login_frame"
+            android:layout_width="344dp"
+            android:layout_height="511dp"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="263dp"
+            android:layout_marginEnd="34dp"
+            android:background="@drawable/bg_loginbox"
+            android:elevation="10dp"
+            android:orientation="vertical"
+           >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginVertical="20dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="30dp"
+                android:paddingVertical="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="90dp"
+                    android:gravity="left"
+                    android:text="login"
+                    android:textAllCaps="true"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_signup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="signup"
+                    android:padding="0dp"
+                    android:textAllCaps="true"
+                    android:textColor="@color/gray"
+                    android:textSize="22dp"
+                    app:backgroundTint="@android:color/transparent" />
+            </LinearLayout>
+            <EditText
+                android:id="@+id/edt_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:background="@drawable/bg_edittextbox"
+                android:layout_marginVertical="20dp"
+                android:layout_gravity="center"
+                android:hint="Username"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:drawableStart="@drawable/custom_personicon_focus"
+                android:drawablePadding="10dp"
+                />
+            <EditText
+                android:id="@+id/edt_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:background="@drawable/bg_edittextbox"
+                android:layout_marginVertical="20dp"
+                android:layout_gravity="center"
+                android:hint="Password"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:drawableStart="@drawable/custom_pwdicon_focus"
+                android:drawablePadding="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot Password?"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/gray"
+                android:layout_marginVertical="50dp"
+                />
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="login"
+                android:textAllCaps="true"
+                android:textSize="25dp"
+                android:background="@drawable/bg_btnlogin"
+                app:backgroundTint="@null"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
