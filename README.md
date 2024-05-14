@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 
-[![Contributors][contributors-shield]][contributors-url] ![languagecount][language-count-shield] ![license][license-shield] [![GitHub followers][followers-shield]][contributors-url]
+[![Contributors][contributors-shield]][contributors-url] ![languagecount][language-count-shield] ![license][license-shield] [![GitHub followers][followers-shield]][contributors-url]![CommitTotal][commit-shield]
 
 <br/>
 <!-- Giới thiệu bản thân -->
@@ -336,5 +336,6 @@
 [language-count-shield]: https://img.shields.io/github/languages/count/nguyenduydan/63133615_JavaProgramming?color=red
 [license-shield]: https://img.shields.io/github/license/nguyenduydan/63133615_JavaProgramming
 [followers-shield]: https://img.shields.io/github/followers/nguyenduydan?style=flat
+[commit-shield]: https://img.shields.io/github/commit-activity/t/nguyenduydan/63133615_AndroidProgramming?style=flat&color=yellow
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
