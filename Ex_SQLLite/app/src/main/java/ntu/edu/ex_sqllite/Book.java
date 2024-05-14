@@ -1,21 +1,20 @@
 package ntu.edu.ex_sqllite;
 
 public class Book {
-    int  BookID;
+    int BookID;
     String BookName;
     int Page;
     float Price;
-    String Description;
-    // Tạo các getter. setter, contrtructor
-    public Book() {
+    String Desciption;
 
-    }
-    public Book(int bookID, String bookName, int page, float price, String description) {
+    public Book(){}
+
+    public Book(int bookID, String bookName, int page, float price, String desciption) {
         BookID = bookID;
         BookName = bookName;
         Page = page;
         Price = price;
-        Description = description;
+        Desciption = desciption;
     }
 
     public int getBookID() {
@@ -50,11 +49,11 @@ public class Book {
         Price = price;
     }
 
-    public String getDescription() {
-        return Description;
+    public String getDesciption() {
+        return Desciption;
     }
 
-    public void setDescription(String description) {
-        Description = description;
+    public void setDesciption(String desciption) {
+        Desciption = desciption;
     }
 }
