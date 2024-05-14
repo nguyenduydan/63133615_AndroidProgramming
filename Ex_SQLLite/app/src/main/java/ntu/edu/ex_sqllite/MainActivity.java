@@ -3,6 +3,7 @@ package ntu.edu.ex_sqllite;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,12 +14,14 @@ import androidx.core.view.WindowInsetsCompat;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
+    ArrayList<Book> dsSach;
+    ListView lv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+        lv = (ListView) findViewById(R.id.lvBook);
 //        //step 1: Create database -- Chỉ dùng lần đầu
             SQLiteDatabase db;
            db = openOrCreateDatabase("QLSach.db", MODE_PRIVATE,  null);
@@ -57,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         //B3: Đổ vào biến nào đó để xử lý
             //3.1 Xây dựng model/class cho bảng Book, ví dụ Book.java
             //3.2 Tạo biến ArrayList<Book> dsSach;
-        ArrayList<Book> dsSach = new ArrayList<Book>();
+        dsSach = new ArrayList<Book>();
         while (cs.moveToNext()) // còn bản ghi để chuyển tới
         {
             // Lấy dữ liệu từng côột ở dòng hiện tại
@@ -70,6 +73,9 @@ public class MainActivity extends AppCompatActivity {
             Book b = new Book(idSach,tenSach,soTrang,gia,mota);
             dsSach.add(b);
         }
+        //B4: Hiển thị lên listview, recylerview
+        BookAdapter adapter = new BookAdapter(this, dsSach);
 
+        lv.setAdapter(adapter);
     }
 }
