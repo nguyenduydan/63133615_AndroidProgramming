@@ -6,7 +6,7 @@
 <!-- Giới thiệu bản thân -->
 <div align="center">
     <a href="https://github.com/nguyenduydan/63133615_AndroidProgramming">
-        <img src="[Img/logo1.png](https://www.google.com/url?sa=i&url=https%3A%2F%2Fgiphy.com%2Fexplore%2Fjava-developer&psig=AOvVaw16mRLSEajauS4P8CzeYNPB&ust=1715735605987000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNDX56v7i4YDFQAAAAAdAAAAABAJ)" alt="Logo" width="auto" height="300">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExam8zbjdqZzBuNDc5d3JwNnZsMTBiZWwyc2M0YXJ3eXJldWpoc3o4ciZlcD12MV9naWZzX3NlYXJjaCZjdD1n/2IudUHdI075HL02Pkk/giphy.gif" alt="Logo" width="auto" height="300">
     </a>
      <h3 align="center">NGUYỄN THIẾT DUY ĐAN</h3>
      <h3 align="center" style="margin:0">63133615</h3>
