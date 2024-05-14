@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 
-[![Contributors][contributors-shield]][contributors-url] ![languagecount][language-count-shield] ![license][license-shield] [![GitHub followers][followers-shield]][contributors-url]![CommitTotal][commit-shield]
+[![Contributors][contributors-shield]][contributors-url] ![languagecount][language-count-shield] ![license][license-shield] [![GitHub followers][followers-shield]][contributors-url] ![CommitTotal][commit-shield]
 
 <br/>
 <!-- Giới thiệu bản thân -->
