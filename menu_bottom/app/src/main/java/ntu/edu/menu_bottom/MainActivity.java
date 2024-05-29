@@ -31,15 +31,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int itemID = item.getItemId();
-                if(itemID == R.id.add){
-                    loadFragment(new AddFragment(),false);
-                }else if(itemID == R.id.bag){
-                    loadFragment(new BagFragment(),false);
-                }else if(itemID == R.id.lib){
-                    loadFragment(new VideoFragment(),false);
-                }else{
-                    loadFragment(new ShoppingFragment(),false);
-                }
+                    if(itemID == R.id.add){
+                        loadFragment(new AddFragment(),false);
+                    }else if(itemID == R.id.bag){
+                        loadFragment(new BagFragment(),false);
+                    }else if(itemID == R.id.lib){
+                        loadFragment(new VideoFragment(),false);
+                    }else{
+                        loadFragment(new ShoppingFragment(),false);
+                    }
                 return true;
             }
         });

@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
            db = openOrCreateDatabase("QLSach.db", MODE_PRIVATE,  null);
 //
 //        // run test and see if  csdl has been created?
-//        //Step 2: create table
+//        //Step 2: create tablec
 //        String sqlDelTablehad ="DROP TABLE IF EXISTS Books;";
 //        db.execSQL(sqlDelTablehad); //execSQL is queries to table
 //        String BOOK =  "CREATE TABLE Books( BookID integer PRIMARY KEY, " +
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         while (cs.moveToNext()) // còn bản ghi để chuyển tới
         {
             // Lấy dữ liệu từng côột ở dòng hiện tại
-            int idSach = cs.getInt(0);  // lấy dữ liệu ở côt 0, kiểu int
+            int idSach = cs.getInt(0)   ;  // lấy dữ liệu ở côt 0, kiểu int
             String tenSach = cs.getString(1);
             int soTrang = cs.getInt(2);
             float gia = cs.getFloat(3);
